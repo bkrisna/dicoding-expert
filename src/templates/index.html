@@ -2,38 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>#MyRestoCatalorue</title>
 </head>
 <body>
 <div id="app">
     <header>
-        <h1> #MyRestoCatalogue </h1>
-        <a id="menu" class="header__menu">☰</a>
         <nav>
-            <ul>
-                <li><a href="#">Hove</a></li>
-                <li><a href="#">Favorite</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-    </main>
-    <footer>
-        <div class="row justify-content-center">
-            <div class="col social_icon">
-                <a href="#"> <i class="fab fa-facebook icon"></i></a>
-                <a href="#"> <i class="fab fa-twitter icon"></i></a>
-                <a href="#"> <i class="fab fa-linkedin icon"></i></a>
-                <a href="#"> <i class="fab fa-tumblr icon"></i></a>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col">
-                    <p>Copyright &copy; 2021 - #MyRestoCatalogue</p>
+            <div id="navbar">
+                <div id="logo">
+                    <div class="logo">#MyRestoCatalogue</div>
+                </div>
+                <div id="links">
+                    <a href="#">Home</a>
+                    <a href="#">Favorite</a>
+                    <a href="#">About Us</a>
+                </div>
+                <div class="mobile-btn">
+                    <a id="menu-btn" onclick="myFunction()">☰</a>
                 </div>
             </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <ul class="mobile-links">
+                <li class="nav-list"><a href="#">Home</a></li>
+                <li class="nav-list"><a href="#">Favorite</a></li>
+                <li class="nav-list"><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <img src="../images/heros/hero-image_2.jpg" class="featured-image" alt="">
+    </main>
+    <footer>
+        <div class="col">
+            <p>Copyright &copy; 2021 - #MyRestoCatalogue</p>
         </div>
     </footer>
 </div>
