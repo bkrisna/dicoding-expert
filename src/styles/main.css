@@ -26,9 +26,9 @@ body {
     color: #FFF;
 }
 
-#app > main {
+/*#app > main {
     background: #f5cebe;
-}
+}*/
 
 #app > footer {
     background: #114e60;
@@ -109,12 +109,65 @@ a:hover {
     object-fit: cover;
     object-position: center;
 }
-  
+
+.hero_image {
+    display: block;
+ 	/*overflow: visible;*/
+    z-index:-1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;    
+}
+
+.jumbotron {
+    display: grid;
+    grid-template-areas: "jumbotron";
+    place-items: center;
+    height: 60vh;
+    max-height: 600px;
+    overflow: hidden;
+    background-color: rgba(#3c87b3, 0.7);
+}
+
+.jumbotron > * {
+    grid-area: jumbotron;
+  }
+
+.jumbotron_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    min-width: 30ch;
+    padding: 1rem;
+}
+
+.jumbotron_img {
+    object-fit: cover;
+    height: min(60vh, 600px);
+    width: 100%;
+    z-index: -1;
+}
+
+.jumbotron-overlay {
+    max-width: 100%;
+    background: black;
+    background: linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.7777485994397759) 30%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
 /* Mobile to Tablet  */
 @media (min-width: 320px) and (max-width: 767px) {
     #links,
     .mobile-menu {
         display: none;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: 700;
     }
 }
   
