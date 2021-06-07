@@ -161,11 +161,12 @@ a:hover {
 
 .hero {
     background: url('../public/images/heros/hero-image_2.jpg') center;
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
     background-size: cover;
     padding: 4rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    align-items: center;
+    align-items: center;    
 }
   
 .hero > * {
@@ -187,58 +188,57 @@ a:hover {
     margin-top: .75rem;
 }
 
-.banner-btn-item {
-    font-size: calc(8pt + 0.15vw);
-    padding-top: calc(0.5em + 0.08vw);
-    padding-bottom: calc(0.5em + 0.08vw);
-    padding-left: calc(0.5em + 0.08vw);
-    padding-right: calc(0.5em + 0.08vw);
-    color: blue;
-    background-color: white;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid white;
-}
-
-.button {
+.breweries {
+    padding: 2rem;
+  }
+  
+  .breweries > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .breweries > ul > li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+  }
+  
+  .breweries > ul > li > figure {
+    max-height: 220px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+  }
+  
+  .breweries > ul > li > figure > img {
+    width: 100%;
+  }
+  
+  .breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+  }
+  
+  .breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .75rem;
     font-size: 1.25rem;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    align-self: start;
-    background-color: #fff;
-    color: #2ba27c;
-    border-radius: 8px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
-    padding: 0.25em 0.75em;
-    min-width: 10ch;
-    min-height: 44px;
-    text-align: center;
-    line-height: 1.1;
-    transition: 220ms all ease-in-out;
-}
-
-.button:hover,
-.button:active {
-    background-color: scale-color($secondary, $lightness: 90%);
-}
-
-.button:focus {
-    outline-style: solid;
-    outline-color: transparent;
-    box-shadow: 0 0 0 4px scale-color($secondary, $lightness: 50%);
-}
-
-.banner-btn-item:link {
-    text-decoration: none;
-}
-
-.banner-btn-item:visited{
-    text-decoration: none;
-}
+  }
+  
+  .breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+  }
+  
+  .breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+  }
 
 /* Mobile to Tablet  */
 @media (min-width: 320px) and (max-width: 767px) {
