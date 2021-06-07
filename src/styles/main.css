@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
 
 html {
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +13,24 @@ body {
     margin: 0;
     background: #f4eee8;
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+}
+  
+a:hover {
+    opacity: .6;
 }
 
 #app {
@@ -34,7 +53,8 @@ body {
     background: #114e60;
 	color: #FFF;
     text-align: center;
-    padding: 5px;
+    padding: .75rem;
+    font-size: .75rem;
 }
 
 #navbar {
@@ -139,54 +159,32 @@ a:hover {
     width: 100%;    
 }
 
-/*.jumbotron {
+.hero {
+    background: url('../public/images/heros/hero-image_2.jpg') center;
+    background-size: cover;
+    padding: 4rem 2rem;
     display: grid;
-    grid-template-areas: "jumbotron";
-    place-items: center;
-    max-height: 350px;
-    overflow: hidden;
-}*/
-
-.jumbotron {
-    display: grid;
-    grid-template-areas: "jumbotron";
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    place-items: center;
-    max-height: 350px;
-    overflow: hidden;
     align-items: center;
 }
-
-.jumbotron > * {
-    grid-area: jumbotron;
-    color: #fff;
+  
+.hero > * {
+    color: white;
 }
-
-.jumbotron_content {
-    z-index: 1;
-    text-align: center;
-    color: #000;
-    min-width: 20ch;
-    padding: 5px;
-    width: 100%;
-    max-height: 350px;
-    background: #f5cebe;
-    background: linear-gradient(
-        145deg,
-        rgba(245,206,190, 0.7777485994397759) 30%,
-        rgba(255, 255, 255, 0) 100%
-    );
+  
+.hero > h1 {
+    font-size: 4rem;
+    padding-bottom: 1rem;
 }
-
-.jumbotron_content > span {
-    font-weight: 700px;
+  
+.hero > article > p {
+    font-size: 1.5rem;
+    font-weight: 200;
 }
-
-.jumbotron_img {
-    object-fit: cover;
-    height: min(60vh, 350px);
-    max-height: 350px;
-    width: 100%;
+  
+.hero > article > a {
+    padding: 1rem;
+    margin-top: .75rem;
 }
 
 .banner-btn-item {
@@ -254,26 +252,23 @@ a:hover {
         font-weight: 700;
     }
 
-    .jumbotron,
-    .jumbotron_content,
-    .jumbotron_img {
-        max-height: 200px;
+    .hero {
+        padding: 1rem;
     }
 
-    .jumbotron_content > h1 {
-        font-size: 18px;
-        margin: 5px;
+    .hero > h1 {
+        font-size: 3rem;
+        padding: 0;
+        margin: 0;
     }
 
-    .jumbotron_content > p {
-        font-size: 14px;
-        font-weight: 300;
-        margin: 5px;
+    .hero > article > p {
+        font-size: 1.5rem;
     }
 
-    .button {
-        font-size: 12px;
-        padding: 0.05em 0.25em;
+    .hero > article > a {
+        padding: 0.5rem;
+        margin: 0;
     }
 }
   
