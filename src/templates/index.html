@@ -8,29 +8,19 @@
 <body>
 <div id="app">
     <header>
-        <nav>
-            <div id="navbar">
-                <div id="logo">
-                    <div class="logo">#MyRestoCatalogue</div>
-                </div>
-                <div id="links">
-                    <a href="#">Home</a>
-                    <a href="#">Favorite</a>
-                    <a href="#">About Us</a>
-                </div>
-                <div class="mobile-btn">
-                    <a id="menu-btn">☰</a>
-                </div>
-            </div>
+        <nav class="navbar">
+          <div class="logo">#MyRestoCatalogue</div>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-list" id="nav-list">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Favorite</a></li>
+            <li class="nav-item"><a href="#">About US</a></li>
+          </ul>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu">
-            <ul class="mobile-links">
-                <li class="nav-list"><a href="#">Home</a></li>
-                <li class="nav-list"><a href="#">Favorite</a></li>
-                <li class="nav-list"><a href="#">About Us</a></li>
-            </ul>
-        </div>
     </header>
     <main>
         <section class="hero">
@@ -40,7 +30,7 @@
                     <a href="#" class="button">Find Now !!</a>
             </article>
         </section>
-        <section class="breweries" id="breweries">
+        <section class="restos" id="restos">
             <ul>
               <li>
                 <figure>
