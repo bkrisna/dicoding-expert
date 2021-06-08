@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
 
+p, a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 a {
     background-color: goldenrod;
     text-decoration: none;
@@ -194,8 +198,10 @@ a:hover {
   
   .breweries > ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 1rem;
+    list-style-type: none;
+    padding: 0;
   }
   
   .breweries > ul > li {
@@ -209,6 +215,7 @@ a:hover {
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     position: relative;
+    margin: 0;
   }
   
   .breweries > ul > li > figure > img {
@@ -269,6 +276,10 @@ a:hover {
     .hero > article > a {
         padding: 0.5rem;
         margin: 0;
+    }
+    
+    .breweries {
+        padding: 1rem;
     }
 }
   
