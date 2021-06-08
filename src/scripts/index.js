@@ -16,7 +16,12 @@ hamburgerButtonElement.addEventListener("click", event => {
 });
 
 mainElement.addEventListener("click", event => {
-    drawerElement.classList.remove("open");
+    drawerElement.classList.remove("mobile-nav");
+    hamburgerButtonElement.classList.remove("is-active");
+    event.stopPropagation();
+})
+
+drawerElement.addEventListener("click", event => {
     drawerElement.classList.remove("mobile-nav");
     hamburgerButtonElement.classList.remove("is-active");
     event.stopPropagation();

@@ -23,20 +23,6 @@ p, a {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-a {
-    background-color: goldenrod;
-    text-decoration: none;
-    color: white;
-    border-radius: .25rem;
-    text-align: center;
-    display: inline-block;
-    transition: all .3s;
-}
-  
-a:hover {
-    opacity: .6;
-}
-
 #app {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -48,6 +34,10 @@ a:hover {
     background: #325288;
     color: #FFF;
     width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #app > footer {
@@ -58,99 +48,6 @@ a:hover {
     font-size: .75rem;
     min-height: 70px;
 }
-
-/*
-#navbar {
-    display: grid;
-    min-height: 70px;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-    padding: 0 10px;
-}
-
-#navbar > a {
-    color: #000;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-decoration: none;
-    transition: color 0.3s ease-out;
-  }
-  
-#navbar > a:hover {
-    color: #3498db;
-  }
-
-#logo {
-    display: grid;
-    justify-content: start;
-    align-content: center;
-    font-size: 30px;
-    font-weight: 700;
-}
-  
-#links {
-    display: grid;
-    justify-content: right;
-    align-content: center;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-}
-  
-.mobile-menu {
-    display: block;
-    list-style-type: none;
-    background-color: #fff;
-    float: right;
-    width: 150px;
-    padding: 5px 0 50px 0;
-    border: 1px solid #eee;
-    z-index: 55;
-}*/
-
-/*#drawer {
-    width: 250px;
-    height: 100%;
-    position: absolute;*/
-    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
-    /*transform: translate(-250px, 0);
-    transition: transform 0.3s ease-in-out;
-    background-color:#111;
-}*/
-
-/*
-#mobile-menu {
-    transform: translate(-250px, 0);
-    transition: transform 0.3s ease-in-out;
-    background-color:#111;
-}
-
-#mobile-menu.open {
-    transform: translate(0,0);
-    z-index: 1;
-}
-
-.mobile-links li {
-    line-height: 2.8rem;
-}
-  
-.mobile-btn {
-    display: grid;
-    justify-content: right;
-    align-content: center;
-    grid-auto-flow: column;
-    cursor: pointer;
-    font-size: 30px;
-    font-weight: 700;
-}
-  
-.nav-list {
-    list-style-type: none;
-}
-  
-.nav-list:hover {
-    opacity: 0.5;
-    cursor: pointer;
-}*/
 
 .navbar {
     display: grid;
@@ -172,12 +69,13 @@ a:hover {
 .navbar ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: repeat(3 ,auto);
+    grid-gap: 20px;
     justify-self: end;
     padding-right: 40px;
 }
   
-.nav-item a {
+.nav-item > a {
     color: #FFF;
     font-size: 0.9rem;
     font-weight: 400;
@@ -185,7 +83,7 @@ a:hover {
     transition: color 0.3s ease-out;
 }
   
-.nav-item a:hover {
+.nav-item > a:hover {
     color: #3498db;
 }
 
@@ -225,6 +123,20 @@ a:hover {
     -ms-transform: translateY(-8px) rotate(-45deg);
     -o-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
+}
+
+.button {
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+}
+  
+.button:hover {
+    opacity: .6;
 }
 
 .hero {
@@ -321,15 +233,19 @@ a:hover {
     .navbar ul {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         position: fixed;
-        justify-content: start;
+        justify-content: flex-start;
         top: 55px;
-        background-color: #fff;
+        background-color: #f5cebe;
         width: 100%;
         height: calc(100vh - 55px);
         transform: translate(-101%);
         text-align: center;
         overflow: hidden;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
     }
     .navbar .logo {
         font-size: 25px;
@@ -338,14 +254,27 @@ a:hover {
     }
     .navbar li {
         padding: 15px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     }
       
     .navbar li:first-child {
-        margin-top: 50px;
+        margin-top: 30px;
     }
-      
-    .navbar li a {
-        font-size: 1rem;
+
+    .navbar li:nth-last-of-type(1) {
+        border-bottom: none;
+    }
+
+    .nav-item > a {
+        color: #000;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.3s ease-out;
+    }
+
+    .nav-item > a:hover {
+        color: #3498db;
     }
        
     .menu-toggle, .bar {
