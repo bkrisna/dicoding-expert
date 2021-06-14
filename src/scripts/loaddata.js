@@ -30,6 +30,7 @@ function loadData() {
                         <figcaption><h3>${resto.name} - ${resto.city}</h3></figcaption>
                     </figure>
                     <article>
+                        <h3>Rating: ${resto.rating}<h3>
                         <p class="text-concat">
                              ${resto.description}
                         </p>
